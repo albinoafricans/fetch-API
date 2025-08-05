@@ -38,14 +38,24 @@ async function getAllPosts() {
         const body = document.createElement("p");
         const link = document.createElement("a");
 
+        // popula elementos com os dados
+
         title.innerText = post.title;
         body.innerText = post.body;
         link.innerText = "Ler";
+
+        // setar atribruto href passando o id do post como paramentro
+
         link.setAttribute("href", `/post.html?id=${post.id}`);
+
+        // inserir elementos na div
 
         div.appendChild(title);
         div.appendChild(body);
         div.appendChild(link);
+
+        // inserir divs no container
+
         postsContainer.appendChild(div);
 
     })
